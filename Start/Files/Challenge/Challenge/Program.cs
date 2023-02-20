@@ -66,6 +66,6 @@ using (StreamWriter sw = File.CreateText(dirs.basedir+outputFileName))
 
 
 bool isOfficeFile(string fileName) {
-	
+	if (fileName == null) return false;
 	return fileName.EndsWith(pptx) || fileName.EndsWith(docx) || fileName.EndsWith(xlsx);
 }
